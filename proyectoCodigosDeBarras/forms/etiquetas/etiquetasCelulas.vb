@@ -58,23 +58,19 @@ Public Class etiquetasCelulas
 
             txNumeroSerieInicial.ReadOnly = False
 
+            txNumeroSerieInicial.Text = master.leerCodigo("celNumSerie", Year(Now)) - 1
+
         Else
 
             limpiar()
 
-            If imprimiAuto() Then
+            If imprimirAuto() Then
 
                 Close()
 
             End If
 
         End If
-
-    End Sub
-
-    Private Sub etiquetasEquipos_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
-
-        'e.Cancel = True
 
     End Sub
 
@@ -92,7 +88,7 @@ Public Class etiquetasCelulas
     'Imprimir
     Private Sub bImprimir_Click(sender As Object, e As EventArgs) Handles bImprimir.Click
 
-        If imprimiAuto() Then
+        If imprimirAuto() Then
 
             Close()
 
@@ -100,7 +96,7 @@ Public Class etiquetasCelulas
 
     End Sub
 
-    Public Function imprimiAuto()
+    Public Function imprimirAuto()
 
         If cbImpresoras.SelectedIndex = -1 Or cbImpresorasCable.SelectedIndex = -1 Then
 
@@ -201,14 +197,9 @@ Public Class etiquetasCelulas
     'Imprimir imagenes guardadas.
     Public Function imprimir() As Boolean
 
-        Panel2.Visible = True
-
-        Panel2.BringToFront()
-
         'Imprimimos las imagenes.
         If imprimirCodigos() Then
 
-            'If ckVolverImprimir.Checked = False Or numero > master.leerCodigo("celNumSerie", Year(Now)) Then
             If ckVolverImprimir.Checked = False Then
 
                 master.actualizarCampo("celNumSerie", numero)
@@ -216,10 +207,6 @@ Public Class etiquetasCelulas
             End If
 
             limpiar()
-
-            Panel2.Visible = False
-
-            Panel2.SendToBack()
 
             If impresoraPredeterminada = "" Then
 
@@ -241,19 +228,17 @@ Public Class etiquetasCelulas
 
             End If
 
+            imprimir = True
+
         Else
 
             MsgBox("Por favor, compruebe que tiene conexión con la impresora seleccionada y que esta tenga creado el formato 'codigoBarras' con las medidas 50mmx20mm.", MsgBoxStyle.Information)
 
             limpiar()
 
-            Panel2.Visible = False
-
-            Panel2.SendToBack()
-
         End If
 
-        Return True
+        funcCB.borrarImagenesCelulas()
 
     End Function
 
@@ -334,20 +319,6 @@ Public Class etiquetasCelulas
         txCopias.Text = 1
 
         txCantidad.Text = 1
-
-        calculoEtiquetas("Limpiar")
-
-        For Each control In Controls
-
-            If TypeOf control Is CheckBox Then
-
-                control.Checked = False
-
-            End If
-
-        Next
-
-        txCantidad.Focus()
 
     End Sub
 

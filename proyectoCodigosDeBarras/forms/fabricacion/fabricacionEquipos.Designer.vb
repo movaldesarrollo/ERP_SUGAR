@@ -43,6 +43,8 @@ Partial Class fabricacionEquipos
         Me.txTotalEquipos = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.bBusquedaEquipo = New System.Windows.Forms.Button()
+        Me.btnReimprimir = New System.Windows.Forms.Button()
+        Me.btnSeleccionImp = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -52,11 +54,11 @@ Partial Class fabricacionEquipos
         Me.bBorrarEquipo.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.bBorrarEquipo.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.bBorrarEquipo.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.bBorrarEquipo.Location = New System.Drawing.Point(786, 13)
+        Me.bBorrarEquipo.Location = New System.Drawing.Point(851, 13)
         Me.bBorrarEquipo.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.bBorrarEquipo.Name = "bBorrarEquipo"
         Me.bBorrarEquipo.Size = New System.Drawing.Size(150, 71)
-        Me.bBorrarEquipo.TabIndex = 4
+        Me.bBorrarEquipo.TabIndex = 5
         Me.bBorrarEquipo.Text = "BORRAR EQUIPO"
         Me.bBorrarEquipo.UseVisualStyleBackColor = True
         '
@@ -69,9 +71,10 @@ Partial Class fabricacionEquipos
         Me.lvEquipos.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lvEquipos.FullRowSelect = True
         Me.lvEquipos.GridLines = True
+        Me.lvEquipos.HideSelection = False
         Me.lvEquipos.Location = New System.Drawing.Point(12, 168)
         Me.lvEquipos.Name = "lvEquipos"
-        Me.lvEquipos.Size = New System.Drawing.Size(1236, 462)
+        Me.lvEquipos.Size = New System.Drawing.Size(1301, 462)
         Me.lvEquipos.TabIndex = 2
         Me.lvEquipos.UseCompatibleStateImageBehavior = False
         Me.lvEquipos.View = System.Windows.Forms.View.Details
@@ -121,7 +124,7 @@ Partial Class fabricacionEquipos
         Me.GroupBox1.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(12, 91)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(1236, 71)
+        Me.GroupBox1.Size = New System.Drawing.Size(1301, 71)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "DETALLES FABRICACIÓN DE EQUIPOS"
@@ -131,7 +134,7 @@ Partial Class fabricacionEquipos
         Me.Label3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(897, 29)
+        Me.Label3.Location = New System.Drawing.Point(962, 29)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(183, 21)
         Me.Label3.TabIndex = 5
@@ -143,7 +146,7 @@ Partial Class fabricacionEquipos
         Me.dtpFecha.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.dtpFecha.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFecha.Location = New System.Drawing.Point(1086, 26)
+        Me.dtpFecha.Location = New System.Drawing.Point(1151, 26)
         Me.dtpFecha.Name = "dtpFecha"
         Me.dtpFecha.Size = New System.Drawing.Size(142, 27)
         Me.dtpFecha.TabIndex = 2
@@ -153,7 +156,7 @@ Partial Class fabricacionEquipos
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(274, 29)
+        Me.Label2.Location = New System.Drawing.Point(6, 28)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(176, 21)
         Me.Label2.TabIndex = 3
@@ -161,13 +164,14 @@ Partial Class fabricacionEquipos
         '
         'cbEquipos
         '
-        Me.cbEquipos.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.cbEquipos.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.cbEquipos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbEquipos.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbEquipos.FormattingEnabled = True
-        Me.cbEquipos.Location = New System.Drawing.Point(456, 25)
+        Me.cbEquipos.Location = New System.Drawing.Point(188, 25)
         Me.cbEquipos.Name = "cbEquipos"
-        Me.cbEquipos.Size = New System.Drawing.Size(772, 29)
+        Me.cbEquipos.Size = New System.Drawing.Size(1105, 29)
         Me.cbEquipos.TabIndex = 1
         '
         'Label1
@@ -179,6 +183,7 @@ Partial Class fabricacionEquipos
         Me.Label1.Size = New System.Drawing.Size(135, 21)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "NºSERIE EQUIPO"
+        Me.Label1.Visible = False
         '
         'txCode
         '
@@ -188,17 +193,18 @@ Partial Class fabricacionEquipos
         Me.txCode.Name = "txCode"
         Me.txCode.Size = New System.Drawing.Size(121, 27)
         Me.txCode.TabIndex = 0
+        Me.txCode.Visible = False
         '
         'bEtiquetas
         '
         Me.bEtiquetas.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.bEtiquetas.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.bEtiquetas.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.bEtiquetas.Location = New System.Drawing.Point(630, 13)
+        Me.bEtiquetas.Location = New System.Drawing.Point(383, 13)
         Me.bEtiquetas.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.bEtiquetas.Name = "bEtiquetas"
         Me.bEtiquetas.Size = New System.Drawing.Size(150, 71)
-        Me.bEtiquetas.TabIndex = 3
+        Me.bEtiquetas.TabIndex = 2
         Me.bEtiquetas.Text = "IMPRIMIR ETIQUETAS"
         Me.bEtiquetas.UseVisualStyleBackColor = True
         '
@@ -207,11 +213,11 @@ Partial Class fabricacionEquipos
         Me.bLimpiar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.bLimpiar.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.bLimpiar.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.bLimpiar.Location = New System.Drawing.Point(942, 13)
+        Me.bLimpiar.Location = New System.Drawing.Point(1007, 13)
         Me.bLimpiar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.bLimpiar.Name = "bLimpiar"
         Me.bLimpiar.Size = New System.Drawing.Size(150, 71)
-        Me.bLimpiar.TabIndex = 5
+        Me.bLimpiar.TabIndex = 6
         Me.bLimpiar.Text = "LIMPIAR"
         Me.bLimpiar.UseVisualStyleBackColor = True
         '
@@ -220,11 +226,11 @@ Partial Class fabricacionEquipos
         Me.bSalir.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.bSalir.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.bSalir.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.bSalir.Location = New System.Drawing.Point(1098, 13)
+        Me.bSalir.Location = New System.Drawing.Point(1163, 13)
         Me.bSalir.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.bSalir.Name = "bSalir"
         Me.bSalir.Size = New System.Drawing.Size(150, 71)
-        Me.bSalir.TabIndex = 6
+        Me.bSalir.TabIndex = 7
         Me.bSalir.Text = "SALIR"
         Me.bSalir.UseVisualStyleBackColor = True
         '
@@ -233,7 +239,7 @@ Partial Class fabricacionEquipos
         Me.Label5.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(998, 637)
+        Me.Label5.Location = New System.Drawing.Point(1063, 637)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(134, 21)
         Me.Label5.TabIndex = 165
@@ -244,7 +250,7 @@ Partial Class fabricacionEquipos
         Me.txTotalEquipos.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txTotalEquipos.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txTotalEquipos.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txTotalEquipos.Location = New System.Drawing.Point(1138, 634)
+        Me.txTotalEquipos.Location = New System.Drawing.Point(1203, 634)
         Me.txTotalEquipos.Name = "txTotalEquipos"
         Me.txTotalEquipos.Size = New System.Drawing.Size(110, 27)
         Me.txTotalEquipos.TabIndex = 164
@@ -269,19 +275,47 @@ Partial Class fabricacionEquipos
         Me.bBusquedaEquipo.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.bBusquedaEquipo.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.bBusquedaEquipo.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.bBusquedaEquipo.Location = New System.Drawing.Point(474, 13)
+        Me.bBusquedaEquipo.Location = New System.Drawing.Point(229, 13)
         Me.bBusquedaEquipo.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.bBusquedaEquipo.Name = "bBusquedaEquipo"
         Me.bBusquedaEquipo.Size = New System.Drawing.Size(150, 71)
-        Me.bBusquedaEquipo.TabIndex = 170
+        Me.bBusquedaEquipo.TabIndex = 1
         Me.bBusquedaEquipo.Text = "BÚSQUEDA EQUIPO"
         Me.bBusquedaEquipo.UseVisualStyleBackColor = True
+        '
+        'btnReimprimir
+        '
+        Me.btnReimprimir.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnReimprimir.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnReimprimir.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.btnReimprimir.Location = New System.Drawing.Point(539, 13)
+        Me.btnReimprimir.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btnReimprimir.Name = "btnReimprimir"
+        Me.btnReimprimir.Size = New System.Drawing.Size(150, 71)
+        Me.btnReimprimir.TabIndex = 3
+        Me.btnReimprimir.Text = "REIMPRIMIR ETIQUETAS"
+        Me.btnReimprimir.UseVisualStyleBackColor = True
+        '
+        'btnSeleccionImp
+        '
+        Me.btnSeleccionImp.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnSeleccionImp.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSeleccionImp.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.btnSeleccionImp.Location = New System.Drawing.Point(695, 13)
+        Me.btnSeleccionImp.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btnSeleccionImp.Name = "btnSeleccionImp"
+        Me.btnSeleccionImp.Size = New System.Drawing.Size(150, 71)
+        Me.btnSeleccionImp.TabIndex = 4
+        Me.btnSeleccionImp.Text = "RESET IMPRESORAS"
+        Me.btnSeleccionImp.UseVisualStyleBackColor = True
         '
         'fabricacionEquipos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1260, 677)
+        Me.ClientSize = New System.Drawing.Size(1325, 677)
+        Me.Controls.Add(Me.btnReimprimir)
+        Me.Controls.Add(Me.btnSeleccionImp)
         Me.Controls.Add(Me.bBusquedaEquipo)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
@@ -330,4 +364,6 @@ Partial Class fabricacionEquipos
     Friend WithEvents txTotalEquipos As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents bBusquedaEquipo As Button
+    Friend WithEvents btnReimprimir As Button
+    Friend WithEvents btnSeleccionImp As Button
 End Class

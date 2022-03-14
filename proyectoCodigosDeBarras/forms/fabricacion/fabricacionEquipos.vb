@@ -3,6 +3,7 @@ Public Class fabricacionEquipos
 
 #Region "VARIABLES"
 
+    Dim master As New Master
     Dim funcCB As New funcionesCodigosBarras
     Dim indice As Integer
     Public cargaCompleta As Boolean
@@ -70,11 +71,53 @@ Public Class fabricacionEquipos
     'Imprimir etiquetas.
     Private Sub bEtiquetas_Click(sender As Object, e As EventArgs) Handles bEtiquetas.Click
 
-        Dim gg As New etiquetasEquipos
+        Dim numSerie As String = master.leerCodigo("EquNumSerie", Year(Now))
 
-        gg.ShowDialog()
+        If cbEquipos.SelectedIndex <> -1 Then
+
+            If MsgBox("¿Confirma que quiere asignar e imprimir un nuevo equipo?", MsgBoxStyle.YesNo) = MsgBoxResult.Yes Then
+
+                If registrar(numSerie) Then
+
+                    Dim gg As New etiquetasEquipos
+
+                    gg.ShowDialog()
+
+                Else
+
+                    MsgBox("Ha habido un problema al registrar el número de serie, contacte con el administrador", MsgBoxStyle.Critical)
+
+                End If
+
+            End If
+
+        Else
+
+            MsgBox("Debe seleccionar un código de artículo.", MsgBoxStyle.Information)
+
+        End If
 
     End Sub
+
+    Public Function registrar(ByVal numserie As String) As Boolean
+
+        If funcCB.existeCodigoEquipo(numserie) Then
+
+            MsgBox("El código introducido ya está asignado a un equipo.", MsgBoxStyle.Information)
+
+        Else
+
+            If funcCB.insertarEquipo(numserie, cbEquipos.SelectedValue) Then
+
+                llenarlv()
+
+                Return True
+
+            End If
+
+        End If
+
+    End Function
 
     Private Sub bSalir_Click(sender As Object, e As EventArgs) Handles bSalir.Click
 
@@ -88,49 +131,6 @@ Public Class fabricacionEquipos
 
     End Sub
 
-    Private Sub codArticulo_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles txCode.KeyDown
-
-        If cbEquipos.SelectedIndex = -1 Then
-
-            MsgBox("Debe seleccionar un código de artículo.", MsgBoxStyle.Information)
-
-            sender.text = ""
-
-        Else
-
-            If e.KeyCode = Keys.Enter Then
-
-                If txCode.Text.Contains("ED") Then
-
-                    If funcCB.existeCodigoEquipo(txCode.Text) Then
-
-                        MsgBox("El código introducido ya está asignado a un equipo.", MsgBoxStyle.Information)
-
-                    ElseIf funcCB.codigoImpresoEquipo(txCode.Text) Then
-
-                        MsgBox("El código introducido no ha sido impreso.", MsgBoxStyle.Information)
-
-                    Else
-
-                        funcCB.insertarEquipo(txCode.Text, cbEquipos.SelectedValue)
-
-                        llenarlv()
-
-                    End If
-
-                Else
-
-                    MsgBox("El código introducido no pertenece a un equipo.", MsgBoxStyle.Information)
-
-                End If
-
-                txCode.Text = ""
-
-            End If
-
-        End If
-
-    End Sub
 
     Private Sub cbCelulas_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbEquipos.SelectedIndexChanged
 
@@ -192,11 +192,28 @@ Public Class fabricacionEquipos
 
     End Sub
 
-    'Private Sub dtpFecha_ValueChanged(sender As Object, e As EventArgs) Handles dtpFecha.ValueChanged
+    Private Sub btnReimprimir_Click(sender As Object, e As EventArgs) Handles btnReimprimir.Click
 
-    '    llenarlv()
+        Dim gg As New etiquetasEquipos
 
-    'End Sub
+        gg.ckVolverImprimir.Checked = True
+
+        gg.ShowDialog()
+
+    End Sub
+
+    Private Sub btnSeleccionImp_Click(sender As Object, e As EventArgs) Handles btnSeleccionImp.Click
+
+        If MsgBox("¿Desea eliminar las impresoras predeterminadas?", MsgBoxStyle.YesNo) = MsgBoxResult.Yes Then
+
+            Dim funcCB As New funcionesCodigosBarras ' acceso a funciones datos de codigos de barras.
+
+            funcCB.borrarImpresoraPredeterminada()
+
+        End If
+
+    End Sub
+
 
 #End Region
 

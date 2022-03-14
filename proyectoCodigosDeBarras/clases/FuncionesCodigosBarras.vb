@@ -801,14 +801,8 @@ where idproduccion = (select idProduccion from EquiposProduccion where numSerie 
 
             End If
 
-            '            sel = "select CEL.*, codArticulo + ' - ' + articulo as ARTICULO from celulasIndustriales as CEL left join articulos as ART on ART.idArticulo = CEL.idArticulo              
-            'where CEL.fechaFabricacion between '" & Format(fecha, "yyyy-MM-dd") & " 00:00:00.000" & "' and '" & Format(DateAdd(DateInterval.Day, 1, fecha), "yyyy-MM-dd") & " 00:00:00.000" & "' " & sID & "  order by CEL.idCelula desc"
-
-            'sel = "select CEL.*, codArticulo + ' - ' + articulo as ARTICULO from celulasIndustriales as CEL left join articulos as ART on ART.idArticulo = CEL.idArticulo              
-            'where  convert (date, CEL.fechaFabricacion) = convert (date, getdate()) " & sID & "  order by CEL.idCelula desc"
-
             sel = "select CEL.*, codArticulo + ' - ' + articulo as ARTICULO from celulasIndustriales as CEL left join articulos as ART on ART.idArticulo = CEL.idArticulo              
-            where  convert (date, CEL.fechaFabricacion) = convert (date, getdate()-2) " & sID & "  order by CEL.idCelula desc"
+            where  convert (date, CEL.fechaFabricacion) = convert (date, getdate()) " & sID & "  order by CEL.idCelula desc"
 
             da = New SqlDataAdapter(sel, con)
 
@@ -860,7 +854,7 @@ where idproduccion = (select idProduccion from EquiposProduccion where numSerie 
         Try
 
             sel = "INSERT INTO celulasIndustriales (numserie ,idArticulo ,fechaFabricacion ,idCreador ,celIndNumSerie)
-     VALUES (0 ," & idArticulo & " ,'" & Now & "' ," & Inicio.vIdUsuario & " ,'" & codigo & "')"
+     VALUES (0 ," & idArticulo & " ,'" & Now & "' ," & Inicio.vIdUsuario & " ,'CI" & codigo & "')"
 
             cmd = New SqlCommand(sel, con)
 
@@ -892,7 +886,7 @@ where idproduccion = (select idProduccion from EquiposProduccion where numSerie 
         Try
             Dim i As Integer
 
-            sel = "select count(*) from celulasIndustriales where celIndNumSerie = '" & codigo & "' " & whereNumSerie
+            sel = "select count(*) from celulasIndustriales where celIndNumSerie = 'CI" & codigo & "' " & whereNumSerie
 
             cmd = New SqlCommand(sel, con)
 
@@ -1229,7 +1223,7 @@ idSubTipoArticulo = 44"
 
         Try
             sel = "INSERT INTO equipos (numserie ,idArticulo ,fechaFabricacion ,idCreador ,EquNumSerie)
-     VALUES (0 ," & idArticulo & " ,'" & Now & "' ," & Inicio.vIdUsuario & " ,'" & codigo & "')"
+     VALUES (0 ," & idArticulo & " ,'" & Now & "' ," & Inicio.vIdUsuario & " ,'ED" & codigo & "')"
 
             cmd = New SqlCommand(sel, con)
 
@@ -1613,7 +1607,7 @@ where convert (date, EQ.fechaFabricacion) = convert (date, getdate())  " & sID &
         Try
 
             sel = "INSERT INTO equiposIndustriales (numserie ,idArticulo ,fechaFabricacion ,idCreador ,EquIndNumSerie)
-     VALUES (0 ," & idArticulo & " ,'" & Now & "' ," & Inicio.vIdUsuario & " ,'" & codigo & "')"
+     VALUES (0 ," & idArticulo & " ,'" & Now & "' ," & Inicio.vIdUsuario & " ,'EI" & codigo & "')"
 
             cmd = New SqlCommand(sel, con)
 

@@ -147,53 +147,6 @@ Public Class fabricacionCelulas
 
     End Function
 
-    'Private Sub codArticulo_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles txCode.KeyDown
-
-    '    If cbCelulas.SelectedIndex = -1 Then
-
-    '        MsgBox("Debe seleccionar un código de artículo.", MsgBoxStyle.Information)
-
-    '        sender.text = ""
-
-    '    Else
-
-    '        If e.KeyCode = Keys.Enter Then
-
-    '            If txCode.Text.Contains("CD") Then
-
-    '                If funcCB.existeCodigoCelula(txCode.Text) Then
-
-    '                    MsgBox("El código introducido ya está asignado a una célula.", MsgBoxStyle.Information)
-
-    '                ElseIf funcCB.codigoImpresoCelula(txCode.Text) Then
-
-    '                    MsgBox("El código introducido no ha sido impreso.", MsgBoxStyle.Information)
-
-    '                Else
-
-    '                    If funcCB.insertarCelula(txCode.Text, cbCelulas.SelectedValue) Then
-
-    '                        llenarlv()
-
-    '                    End If
-
-
-    '                End If
-
-    '            Else
-
-    '                MsgBox("El código introducido no pertenece a una célula.", MsgBoxStyle.Information)
-
-    '            End If
-
-    '            txCode.Text = ""
-
-    '        End If
-
-    '    End If
-
-    'End Sub
-
     'Imprime los códigos.
     Public Function imprimirCodigos() As Boolean
 
@@ -329,7 +282,6 @@ Public Class fabricacionCelulas
         gg.ShowDialog()
 
         If gg.bImpreso And gg.ckCable.Checked Then
-
 
             CrearImagenCodigo(gg.numeroSerie)
 

@@ -43,6 +43,8 @@ Partial Class fabricacionCelulasIndustriales
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txTotalCelulas = New System.Windows.Forms.TextBox()
         Me.bBusquedaCelula = New System.Windows.Forms.Button()
+        Me.btnReimprimir = New System.Windows.Forms.Button()
+        Me.btnSeleccionImp = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -52,11 +54,11 @@ Partial Class fabricacionCelulasIndustriales
         Me.bLimpiar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.bLimpiar.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.bLimpiar.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.bLimpiar.Location = New System.Drawing.Point(942, 13)
+        Me.bLimpiar.Location = New System.Drawing.Point(1006, 13)
         Me.bLimpiar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.bLimpiar.Name = "bLimpiar"
         Me.bLimpiar.Size = New System.Drawing.Size(150, 71)
-        Me.bLimpiar.TabIndex = 4
+        Me.bLimpiar.TabIndex = 6
         Me.bLimpiar.Text = "LIMPIAR"
         Me.bLimpiar.UseVisualStyleBackColor = True
         '
@@ -65,11 +67,11 @@ Partial Class fabricacionCelulasIndustriales
         Me.bSalir.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.bSalir.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.bSalir.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.bSalir.Location = New System.Drawing.Point(1098, 13)
+        Me.bSalir.Location = New System.Drawing.Point(1162, 13)
         Me.bSalir.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.bSalir.Name = "bSalir"
         Me.bSalir.Size = New System.Drawing.Size(150, 71)
-        Me.bSalir.TabIndex = 5
+        Me.bSalir.TabIndex = 7
         Me.bSalir.Text = "SALIR"
         Me.bSalir.UseVisualStyleBackColor = True
         '
@@ -78,7 +80,7 @@ Partial Class fabricacionCelulasIndustriales
         Me.bEtiquetas.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.bEtiquetas.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.bEtiquetas.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.bEtiquetas.Location = New System.Drawing.Point(630, 13)
+        Me.bEtiquetas.Location = New System.Drawing.Point(382, 13)
         Me.bEtiquetas.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.bEtiquetas.Name = "bEtiquetas"
         Me.bEtiquetas.Size = New System.Drawing.Size(150, 71)
@@ -99,7 +101,7 @@ Partial Class fabricacionCelulasIndustriales
         Me.GroupBox1.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(12, 89)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(1236, 67)
+        Me.GroupBox1.Size = New System.Drawing.Size(1300, 67)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "DETALLES FABRICACIÓN DE CÉLULAS INDUSTRIALES"
@@ -113,12 +115,13 @@ Partial Class fabricacionCelulasIndustriales
         Me.Label1.Size = New System.Drawing.Size(133, 21)
         Me.Label1.TabIndex = 7
         Me.Label1.Text = "NºSERIE CÉLULA"
+        Me.Label1.Visible = False
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(272, 29)
+        Me.Label2.Location = New System.Drawing.Point(6, 29)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(176, 21)
         Me.Label2.TabIndex = 6
@@ -129,7 +132,7 @@ Partial Class fabricacionCelulasIndustriales
         Me.Label3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(903, 29)
+        Me.Label3.Location = New System.Drawing.Point(967, 29)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(183, 21)
         Me.Label3.TabIndex = 5
@@ -141,7 +144,7 @@ Partial Class fabricacionCelulasIndustriales
         Me.dtpFecha.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.dtpFecha.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dtpFecha.Location = New System.Drawing.Point(1092, 26)
+        Me.dtpFecha.Location = New System.Drawing.Point(1156, 26)
         Me.dtpFecha.Name = "dtpFecha"
         Me.dtpFecha.Size = New System.Drawing.Size(138, 27)
         Me.dtpFecha.TabIndex = 2
@@ -154,10 +157,10 @@ Partial Class fabricacionCelulasIndustriales
         Me.cbCelulas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbCelulas.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbCelulas.FormattingEnabled = True
-        Me.cbCelulas.Location = New System.Drawing.Point(454, 26)
+        Me.cbCelulas.Location = New System.Drawing.Point(188, 26)
         Me.cbCelulas.Name = "cbCelulas"
-        Me.cbCelulas.Size = New System.Drawing.Size(776, 29)
-        Me.cbCelulas.TabIndex = 1
+        Me.cbCelulas.Size = New System.Drawing.Size(1106, 29)
+        Me.cbCelulas.TabIndex = 0
         '
         'txCode
         '
@@ -168,6 +171,7 @@ Partial Class fabricacionCelulasIndustriales
         Me.txCode.Name = "txCode"
         Me.txCode.Size = New System.Drawing.Size(121, 27)
         Me.txCode.TabIndex = 0
+        Me.txCode.Visible = False
         '
         'PictureBox1
         '
@@ -188,10 +192,11 @@ Partial Class fabricacionCelulasIndustriales
         Me.lvCelulas.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lvCelulas.FullRowSelect = True
         Me.lvCelulas.GridLines = True
+        Me.lvCelulas.HideSelection = False
         Me.lvCelulas.Location = New System.Drawing.Point(12, 162)
         Me.lvCelulas.Name = "lvCelulas"
-        Me.lvCelulas.Size = New System.Drawing.Size(1236, 466)
-        Me.lvCelulas.TabIndex = 1
+        Me.lvCelulas.Size = New System.Drawing.Size(1300, 466)
+        Me.lvCelulas.TabIndex = 8
         Me.lvCelulas.UseCompatibleStateImageBehavior = False
         Me.lvCelulas.View = System.Windows.Forms.View.Details
         '
@@ -222,11 +227,11 @@ Partial Class fabricacionCelulasIndustriales
         Me.bBorrarCelula.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.bBorrarCelula.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.bBorrarCelula.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.bBorrarCelula.Location = New System.Drawing.Point(786, 13)
+        Me.bBorrarCelula.Location = New System.Drawing.Point(850, 13)
         Me.bBorrarCelula.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.bBorrarCelula.Name = "bBorrarCelula"
         Me.bBorrarCelula.Size = New System.Drawing.Size(150, 71)
-        Me.bBorrarCelula.TabIndex = 3
+        Me.bBorrarCelula.TabIndex = 5
         Me.bBorrarCelula.Text = "BORRAR CELULA"
         Me.bBorrarCelula.UseVisualStyleBackColor = True
         '
@@ -248,7 +253,7 @@ Partial Class fabricacionCelulasIndustriales
         Me.Label5.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(981, 637)
+        Me.Label5.Location = New System.Drawing.Point(1045, 637)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(132, 21)
         Me.Label5.TabIndex = 167
@@ -259,7 +264,7 @@ Partial Class fabricacionCelulasIndustriales
         Me.txTotalCelulas.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.txTotalCelulas.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.txTotalCelulas.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txTotalCelulas.Location = New System.Drawing.Point(1138, 634)
+        Me.txTotalCelulas.Location = New System.Drawing.Point(1202, 634)
         Me.txTotalCelulas.Name = "txTotalCelulas"
         Me.txTotalCelulas.Size = New System.Drawing.Size(110, 27)
         Me.txTotalCelulas.TabIndex = 166
@@ -271,19 +276,47 @@ Partial Class fabricacionCelulasIndustriales
         Me.bBusquedaCelula.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.bBusquedaCelula.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.bBusquedaCelula.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.bBusquedaCelula.Location = New System.Drawing.Point(474, 13)
+        Me.bBusquedaCelula.Location = New System.Drawing.Point(226, 13)
         Me.bBusquedaCelula.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.bBusquedaCelula.Name = "bBusquedaCelula"
         Me.bBusquedaCelula.Size = New System.Drawing.Size(150, 71)
-        Me.bBusquedaCelula.TabIndex = 169
+        Me.bBusquedaCelula.TabIndex = 1
         Me.bBusquedaCelula.Text = "BÚSQUEDA CÉLULA"
         Me.bBusquedaCelula.UseVisualStyleBackColor = True
+        '
+        'btnReimprimir
+        '
+        Me.btnReimprimir.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnReimprimir.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnReimprimir.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.btnReimprimir.Location = New System.Drawing.Point(538, 13)
+        Me.btnReimprimir.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btnReimprimir.Name = "btnReimprimir"
+        Me.btnReimprimir.Size = New System.Drawing.Size(150, 71)
+        Me.btnReimprimir.TabIndex = 3
+        Me.btnReimprimir.Text = "REIMPRIMIR ETIQUETAS"
+        Me.btnReimprimir.UseVisualStyleBackColor = True
+        '
+        'btnSeleccionImp
+        '
+        Me.btnSeleccionImp.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnSeleccionImp.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSeleccionImp.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.btnSeleccionImp.Location = New System.Drawing.Point(694, 13)
+        Me.btnSeleccionImp.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
+        Me.btnSeleccionImp.Name = "btnSeleccionImp"
+        Me.btnSeleccionImp.Size = New System.Drawing.Size(150, 71)
+        Me.btnSeleccionImp.TabIndex = 4
+        Me.btnSeleccionImp.Text = "RESET IMPRESORAS"
+        Me.btnSeleccionImp.UseVisualStyleBackColor = True
         '
         'fabricacionCelulasIndustriales
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1260, 677)
+        Me.ClientSize = New System.Drawing.Size(1324, 677)
+        Me.Controls.Add(Me.btnReimprimir)
+        Me.Controls.Add(Me.btnSeleccionImp)
         Me.Controls.Add(Me.bBusquedaCelula)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.txTotalCelulas)
@@ -333,4 +366,6 @@ Partial Class fabricacionCelulasIndustriales
     Friend WithEvents Label5 As Label
     Friend WithEvents txTotalCelulas As TextBox
     Friend WithEvents bBusquedaCelula As Button
+    Friend WithEvents btnReimprimir As Button
+    Friend WithEvents btnSeleccionImp As Button
 End Class

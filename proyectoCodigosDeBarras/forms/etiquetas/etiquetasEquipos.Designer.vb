@@ -28,7 +28,6 @@ Partial Class etiquetasEquipos
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txNumeroSerieInicial = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.bLimpiar = New System.Windows.Forms.Button()
         Me.ckVolverImprimir = New System.Windows.Forms.CheckBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -61,7 +60,7 @@ Partial Class etiquetasEquipos
         '
         Me.bImprimir.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.bImprimir.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.bImprimir.Location = New System.Drawing.Point(301, 13)
+        Me.bImprimir.Location = New System.Drawing.Point(432, 13)
         Me.bImprimir.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.bImprimir.Name = "bImprimir"
         Me.bImprimir.Size = New System.Drawing.Size(126, 70)
@@ -74,7 +73,7 @@ Partial Class etiquetasEquipos
         Me.txCantidad.BackColor = System.Drawing.SystemColors.Window
         Me.txCantidad.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txCantidad.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.txCantidad.Location = New System.Drawing.Point(273, 163)
+        Me.txCantidad.Location = New System.Drawing.Point(286, 420)
         Me.txCantidad.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txCantidad.MaxLength = 4
         Me.txCantidad.Name = "txCantidad"
@@ -89,7 +88,7 @@ Partial Class etiquetasEquipos
         Me.Label1.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.DarkBlue
         Me.Label1.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label1.Location = New System.Drawing.Point(8, 167)
+        Me.Label1.Location = New System.Drawing.Point(21, 424)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(187, 22)
         Me.Label1.TabIndex = 131
@@ -100,12 +99,12 @@ Partial Class etiquetasEquipos
         Me.txNumeroSerieInicial.BackColor = System.Drawing.SystemColors.Window
         Me.txNumeroSerieInicial.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txNumeroSerieInicial.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.txNumeroSerieInicial.Location = New System.Drawing.Point(169, 124)
+        Me.txNumeroSerieInicial.Location = New System.Drawing.Point(182, 103)
         Me.txNumeroSerieInicial.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txNumeroSerieInicial.MaxLength = 9
         Me.txNumeroSerieInicial.Name = "txNumeroSerieInicial"
         Me.txNumeroSerieInicial.ReadOnly = True
-        Me.txNumeroSerieInicial.Size = New System.Drawing.Size(179, 31)
+        Me.txNumeroSerieInicial.Size = New System.Drawing.Size(508, 31)
         Me.txNumeroSerieInicial.TabIndex = 1
         Me.txNumeroSerieInicial.Text = "0"
         Me.txNumeroSerieInicial.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
@@ -116,30 +115,18 @@ Partial Class etiquetasEquipos
         Me.Label2.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.DarkBlue
         Me.Label2.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label2.Location = New System.Drawing.Point(8, 128)
+        Me.Label2.Location = New System.Drawing.Point(12, 106)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(155, 22)
         Me.Label2.TabIndex = 134
         Me.Label2.Text = "Nº SERIE INICIAL"
-        '
-        'bLimpiar
-        '
-        Me.bLimpiar.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.bLimpiar.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.bLimpiar.Location = New System.Drawing.Point(432, 13)
-        Me.bLimpiar.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
-        Me.bLimpiar.Name = "bLimpiar"
-        Me.bLimpiar.Size = New System.Drawing.Size(126, 70)
-        Me.bLimpiar.TabIndex = 7
-        Me.bLimpiar.Text = "LIMPIAR"
-        Me.bLimpiar.UseVisualStyleBackColor = True
         '
         'ckVolverImprimir
         '
         Me.ckVolverImprimir.AutoSize = True
         Me.ckVolverImprimir.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ckVolverImprimir.ForeColor = System.Drawing.Color.DarkBlue
-        Me.ckVolverImprimir.Location = New System.Drawing.Point(12, 90)
+        Me.ckVolverImprimir.Location = New System.Drawing.Point(25, 347)
         Me.ckVolverImprimir.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.ckVolverImprimir.Name = "ckVolverImprimir"
         Me.ckVolverImprimir.Size = New System.Drawing.Size(388, 26)
@@ -163,7 +150,7 @@ Partial Class etiquetasEquipos
         Me.Label3.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.DarkBlue
         Me.Label3.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label3.Location = New System.Drawing.Point(366, 167)
+        Me.Label3.Location = New System.Drawing.Point(379, 424)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(230, 22)
         Me.Label3.TabIndex = 139
@@ -174,7 +161,7 @@ Partial Class etiquetasEquipos
         Me.txCopias.BackColor = System.Drawing.SystemColors.Window
         Me.txCopias.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txCopias.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.txCopias.Location = New System.Drawing.Point(615, 163)
+        Me.txCopias.Location = New System.Drawing.Point(628, 420)
         Me.txCopias.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txCopias.MaxLength = 1
         Me.txCopias.Name = "txCopias"
@@ -187,21 +174,26 @@ Partial Class etiquetasEquipos
         '
         Me.Panel2.BackColor = System.Drawing.Color.White
         Me.Panel2.Controls.Add(Me.PictureBox1)
+        Me.Panel2.Controls.Add(Me.bImprimir)
+        Me.Panel2.Controls.Add(Me.txNumeroSerieInicial)
+        Me.Panel2.Controls.Add(Me.cbImpresoras)
+        Me.Panel2.Controls.Add(Me.Label4)
+        Me.Panel2.Controls.Add(Me.Label2)
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(706, 247)
+        Me.Panel2.Size = New System.Drawing.Size(706, 187)
         Me.Panel2.TabIndex = 140
-        Me.Panel2.Visible = False
         '
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.ERP_SUGAR.My.Resources.Resources.impresora
-        Me.PictureBox1.Location = New System.Drawing.Point(270, 48)
+        Me.PictureBox1.Location = New System.Drawing.Point(266, 13)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(180, 125)
+        Me.PictureBox1.Size = New System.Drawing.Size(113, 70)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
+        Me.PictureBox1.WaitOnLoad = True
         '
         'Label4
         '
@@ -209,7 +201,7 @@ Partial Class etiquetasEquipos
         Me.Label4.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.DarkBlue
         Me.Label4.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label4.Location = New System.Drawing.Point(8, 204)
+        Me.Label4.Location = New System.Drawing.Point(12, 144)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(118, 22)
         Me.Label4.TabIndex = 141
@@ -220,9 +212,9 @@ Partial Class etiquetasEquipos
         Me.cbImpresoras.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbImpresoras.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbImpresoras.FormattingEnabled = True
-        Me.cbImpresoras.Location = New System.Drawing.Point(169, 201)
+        Me.cbImpresoras.Location = New System.Drawing.Point(182, 141)
         Me.cbImpresoras.Name = "cbImpresoras"
-        Me.cbImpresoras.Size = New System.Drawing.Size(521, 30)
+        Me.cbImpresoras.Size = New System.Drawing.Size(508, 30)
         Me.cbImpresoras.TabIndex = 5
         '
         'Label5
@@ -231,7 +223,7 @@ Partial Class etiquetasEquipos
         Me.Label5.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.DarkBlue
         Me.Label5.ImeMode = System.Windows.Forms.ImeMode.NoControl
-        Me.Label5.Location = New System.Drawing.Point(366, 128)
+        Me.Label5.Location = New System.Drawing.Point(467, 351)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(139, 22)
         Me.Label5.TabIndex = 143
@@ -242,7 +234,7 @@ Partial Class etiquetasEquipos
         Me.txnumeroSerieFinal.BackColor = System.Drawing.SystemColors.Window
         Me.txnumeroSerieFinal.Font = New System.Drawing.Font("Century Gothic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txnumeroSerieFinal.ForeColor = System.Drawing.SystemColors.WindowText
-        Me.txnumeroSerieFinal.Location = New System.Drawing.Point(511, 124)
+        Me.txnumeroSerieFinal.Location = New System.Drawing.Point(612, 347)
         Me.txnumeroSerieFinal.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.txnumeroSerieFinal.MaxLength = 9
         Me.txnumeroSerieFinal.Name = "txnumeroSerieFinal"
@@ -265,20 +257,14 @@ Partial Class etiquetasEquipos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(702, 244)
+        Me.ClientSize = New System.Drawing.Size(703, 185)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.ckVolverImprimir)
         Me.Controls.Add(Me.txnumeroSerieFinal)
-        Me.Controls.Add(Me.cbImpresoras)
-        Me.Controls.Add(Me.bImprimir)
-        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.txCopias)
-        Me.Controls.Add(Me.bLimpiar)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.txNumeroSerieInicial)
         Me.Controls.Add(Me.txCantidad)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.bSalir)
@@ -292,6 +278,7 @@ Partial Class etiquetasEquipos
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "ETIQUETAS EQUIPOS"
         Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -305,7 +292,6 @@ Partial Class etiquetasEquipos
     Friend WithEvents Label1 As Label
     Friend WithEvents txNumeroSerieInicial As TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents bLimpiar As Button
     Friend WithEvents ckVolverImprimir As CheckBox
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label3 As Label
