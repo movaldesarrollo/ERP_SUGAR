@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Agrupaciones" targetNamespace="http://tempuri.org/Agrupaciones.xsd" xmlns:mstns="http://tempuri.org/Agrupaciones.xsd" xmlns="http://tempuri.org/Agrupaciones.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Agrupaciones" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="Agrupaciones" msprop:Generator_UserDSName="Agrupaciones" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Agrupaciones" msprop:Generator_UserTableName="Agrupaciones" msprop:Generator_RowDeletedName="AgrupacionesRowDeleted" msprop:Generator_TableClassName="AgrupacionesDataTable" msprop:Generator_RowChangedName="AgrupacionesRowChanged" msprop:Generator_RowClassName="AgrupacionesRow" msprop:Generator_RowChangingName="AgrupacionesRowChanging" msprop:Generator_RowEvArgName="AgrupacionesRowChangeEvent" msprop:Generator_RowEvHandlerName="AgrupacionesRowChangeEventHandler" msprop:Generator_TablePropName="_Agrupaciones" msprop:Generator_TableVarName="tableAgrupaciones" msprop:Generator_RowDeletingName="AgrupacionesRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idAgrupacion" msprop:Generator_UserColumnName="idAgrupacion" msprop:Generator_ColumnPropNameInRow="idAgrupacion" msprop:Generator_ColumnVarNameInTable="columnidAgrupacion" msprop:Generator_ColumnPropNameInTable="idAgrupacionColumn" type="xs:short" minOccurs="0" />
+              <xs:element name="Agrupacion" msprop:Generator_UserColumnName="Agrupacion" msprop:Generator_ColumnPropNameInRow="Agrupacion" msprop:Generator_ColumnVarNameInTable="columnAgrupacion" msprop:Generator_ColumnPropNameInTable="AgrupacionColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Cantidad" msprop:Generator_UserColumnName="Cantidad" msprop:Generator_ColumnPropNameInRow="Cantidad" msprop:Generator_ColumnVarNameInTable="columnCantidad" msprop:Generator_ColumnPropNameInTable="CantidadColumn" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
