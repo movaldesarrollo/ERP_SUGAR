@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="liquidacionIVA" targetNamespace="http://tempuri.org/liquidacionIVA.xsd" xmlns:mstns="http://tempuri.org/liquidacionIVA.xsd" xmlns="http://tempuri.org/liquidacionIVA.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="liquidacionIVA" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="liquidacionIVA" msprop:Generator_DataSetName="liquidacionIVA" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ImportesIVA" msprop:Generator_UserTableName="ImportesIVA" msprop:Generator_RowDeletedName="ImportesIVARowDeleted" msprop:Generator_RowChangedName="ImportesIVARowChanged" msprop:Generator_RowClassName="ImportesIVARow" msprop:Generator_RowChangingName="ImportesIVARowChanging" msprop:Generator_RowEvArgName="ImportesIVARowChangeEvent" msprop:Generator_RowEvHandlerName="ImportesIVARowChangeEventHandler" msprop:Generator_TableClassName="ImportesIVADataTable" msprop:Generator_TableVarName="tableImportesIVA" msprop:Generator_RowDeletingName="ImportesIVARowDeleting" msprop:Generator_TablePropName="ImportesIVA">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="REPoSOP" msprop:Generator_UserColumnName="REPoSOP" msprop:Generator_ColumnPropNameInRow="REPoSOP" msprop:Generator_ColumnVarNameInTable="columnREPoSOP" msprop:Generator_ColumnPropNameInTable="REPoSOPColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="idFactura" msprop:Generator_UserColumnName="idFactura" msprop:Generator_ColumnPropNameInRow="idFactura" msprop:Generator_ColumnVarNameInTable="columnidFactura" msprop:Generator_ColumnPropNameInTable="idFacturaColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="idTipoIVA" msprop:Generator_UserColumnName="idTipoIVA" msprop:Generator_ColumnPropNameInRow="idTipoIVA" msprop:Generator_ColumnVarNameInTable="columnidTipoIVA" msprop:Generator_ColumnPropNameInTable="idTipoIVAColumn" type="xs:short" minOccurs="0" />
+              <xs:element name="Tipo" msprop:Generator_UserColumnName="Tipo" msprop:Generator_ColumnPropNameInRow="Tipo" msprop:Generator_ColumnVarNameInTable="columnTipo" msprop:Generator_ColumnPropNameInTable="TipoColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="Base" msprop:Generator_UserColumnName="Base" msprop:Generator_ColumnPropNameInRow="Base" msprop:Generator_ColumnVarNameInTable="columnBase" msprop:Generator_ColumnPropNameInTable="BaseColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="Cuota" msprop:Generator_UserColumnName="Cuota" msprop:Generator_ColumnPropNameInRow="Cuota" msprop:Generator_ColumnVarNameInTable="columnCuota" msprop:Generator_ColumnPropNameInTable="CuotaColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="IVAoRE" msprop:Generator_UserColumnName="IVAoRE" msprop:Generator_ColumnPropNameInRow="IVAoRE" msprop:Generator_ColumnVarNameInTable="columnIVAoRE" msprop:Generator_ColumnPropNameInTable="IVAoREColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="numFactura" msprop:Generator_UserColumnName="numFactura" msprop:Generator_ColumnPropNameInRow="numFactura" msprop:Generator_ColumnVarNameInTable="columnnumFactura" msprop:Generator_ColumnPropNameInTable="numFacturaColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NombreIVA" msprop:Generator_UserColumnName="NombreIVA" msprop:Generator_ColumnPropNameInRow="NombreIVA" msprop:Generator_ColumnVarNameInTable="columnNombreIVA" msprop:Generator_ColumnPropNameInTable="NombreIVAColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="codMoneda" msprop:Generator_UserColumnName="codMoneda" msprop:Generator_ColumnPropNameInRow="codMoneda" msprop:Generator_ColumnVarNameInTable="columncodMoneda" msprop:Generator_ColumnPropNameInTable="codMonedaColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Simbolo" msprop:Generator_UserColumnName="Simbolo" msprop:Generator_ColumnPropNameInRow="Simbolo" msprop:Generator_ColumnVarNameInTable="columnSimbolo" msprop:Generator_ColumnPropNameInTable="SimboloColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

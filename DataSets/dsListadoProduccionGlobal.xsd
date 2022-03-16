@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsListadoProduccionGlobal" targetNamespace="http://tempuri.org/dsListadoProduccionGlobal.xsd" xmlns:mstns="http://tempuri.org/dsListadoProduccionGlobal.xsd" xmlns="http://tempuri.org/dsListadoProduccionGlobal.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsListadoProduccionGlobal" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="dsListadoProduccionGlobal" msprop:Generator_UserDSName="dsListadoProduccionGlobal" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtGlobal" msprop:Generator_UserTableName="dtGlobal" msprop:Generator_RowDeletedName="dtGlobalRowDeleted" msprop:Generator_TableClassName="dtGlobalDataTable" msprop:Generator_RowChangedName="dtGlobalRowChanged" msprop:Generator_RowClassName="dtGlobalRow" msprop:Generator_RowChangingName="dtGlobalRowChanging" msprop:Generator_RowEvArgName="dtGlobalRowChangeEvent" msprop:Generator_RowEvHandlerName="dtGlobalRowChangeEventHandler" msprop:Generator_TablePropName="dtGlobal" msprop:Generator_TableVarName="tabledtGlobal" msprop:Generator_RowDeletingName="dtGlobalRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idArticulo" msprop:Generator_UserColumnName="idArticulo" msprop:Generator_ColumnPropNameInRow="idArticulo" msprop:Generator_ColumnVarNameInTable="columnidArticulo" msprop:Generator_ColumnPropNameInTable="idArticuloColumn" type="xs:long" minOccurs="0" />
+              <xs:element name="Tipo" msprop:Generator_UserColumnName="Tipo" msprop:Generator_ColumnPropNameInRow="Tipo" msprop:Generator_ColumnVarNameInTable="columnTipo" msprop:Generator_ColumnPropNameInTable="TipoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="codArticulo" msprop:Generator_UserColumnName="codArticulo" msprop:Generator_ColumnPropNameInRow="codArticulo" msprop:Generator_ColumnVarNameInTable="columncodArticulo" msprop:Generator_ColumnPropNameInTable="codArticuloColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Articulo" msprop:Generator_UserColumnName="Articulo" msprop:Generator_ColumnPropNameInRow="Articulo" msprop:Generator_ColumnVarNameInTable="columnArticulo" msprop:Generator_ColumnPropNameInTable="ArticuloColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Cantidad" msprop:Generator_UserColumnName="Cantidad" msprop:Generator_ColumnPropNameInRow="Cantidad" msprop:Generator_ColumnVarNameInTable="columnCantidad" msprop:Generator_ColumnPropNameInTable="CantidadColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="EstaSemana" msprop:Generator_UserColumnName="EstaSemana" msprop:Generator_ColumnPropNameInRow="EstaSemana" msprop:Generator_ColumnVarNameInTable="columnEstaSemana" msprop:Generator_ColumnPropNameInTable="EstaSemanaColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="SemanaProxima" msprop:Generator_UserColumnName="SemanaProxima" msprop:Generator_ColumnPropNameInRow="SemanaProxima" msprop:Generator_ColumnVarNameInTable="columnSemanaProxima" msprop:Generator_ColumnPropNameInTable="SemanaProximaColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="En2Semanas" msprop:Generator_UserColumnName="En2Semanas" msprop:Generator_ColumnPropNameInRow="En2Semanas" msprop:Generator_ColumnVarNameInTable="columnEn2Semanas" msprop:Generator_ColumnPropNameInTable="En2SemanasColumn" type="xs:double" minOccurs="0" />
+              <xs:element name="Mas2Semanas" msprop:Generator_UserColumnName="Mas2Semanas" msprop:Generator_ColumnPropNameInRow="Mas2Semanas" msprop:Generator_ColumnVarNameInTable="columnMas2Semanas" msprop:Generator_ColumnPropNameInTable="Mas2SemanasColumn" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

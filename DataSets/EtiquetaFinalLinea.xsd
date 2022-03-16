@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="EtiquetaFinalLinea" targetNamespace="http://tempuri.org/EtiquetaFinalLinea.xsd" xmlns:mstns="http://tempuri.org/EtiquetaFinalLinea.xsd" xmlns="http://tempuri.org/EtiquetaFinalLinea.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="EtiquetaFinalLinea" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="EtiquetaFinalLinea" msprop:Generator_UserDSName="EtiquetaFinalLinea">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowClassName="DataTable1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="textefCliente" msprop:Generator_ColumnVarNameInTable="columntextefCliente" msprop:Generator_ColumnPropNameInRow="textefCliente" msprop:Generator_ColumnPropNameInTable="textefClienteColumn" msprop:Generator_UserColumnName="textefCliente" type="xs:string" minOccurs="0" />
+              <xs:element name="codRefCliente" msprop:Generator_ColumnVarNameInTable="columncodRefCliente" msprop:Generator_ColumnPropNameInRow="codRefCliente" msprop:Generator_ColumnPropNameInTable="codRefClienteColumn" msprop:Generator_UserColumnName="codRefCliente" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="textNumSerie" msprop:Generator_ColumnVarNameInTable="columntextNumSerie" msprop:Generator_ColumnPropNameInRow="textNumSerie" msprop:Generator_ColumnPropNameInTable="textNumSerieColumn" msprop:Generator_UserColumnName="textNumSerie" type="xs:string" minOccurs="0" />
+              <xs:element name="codNumSerie" msprop:Generator_ColumnVarNameInTable="columncodNumSerie" msprop:Generator_ColumnPropNameInRow="codNumSerie" msprop:Generator_ColumnPropNameInTable="codNumSerieColumn" msprop:Generator_UserColumnName="codNumSerie" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="textCantidad" msprop:Generator_ColumnVarNameInTable="columntextCantidad" msprop:Generator_ColumnPropNameInRow="textCantidad" msprop:Generator_ColumnPropNameInTable="textCantidadColumn" msprop:Generator_UserColumnName="textCantidad" type="xs:string" minOccurs="0" />
+              <xs:element name="codCantidad" msprop:Generator_ColumnVarNameInTable="columncodCantidad" msprop:Generator_ColumnPropNameInRow="codCantidad" msprop:Generator_ColumnPropNameInTable="codCantidadColumn" msprop:Generator_UserColumnName="codCantidad" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="codEAN13" msprop:Generator_ColumnVarNameInTable="columncodEAN13" msprop:Generator_ColumnPropNameInRow="codEAN13" msprop:Generator_ColumnPropNameInTable="codEAN13Column" msprop:Generator_UserColumnName="codEAN13" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="PV" msprop:Generator_ColumnVarNameInTable="columnPV" msprop:Generator_ColumnPropNameInRow="PV" msprop:Generator_ColumnPropNameInTable="PVColumn" msprop:Generator_UserColumnName="PV" type="xs:string" minOccurs="0" />
+              <xs:element name="etiquetaCliente" msprop:Generator_ColumnVarNameInTable="columnetiquetaCliente" msprop:Generator_ColumnPropNameInRow="etiquetaCliente" msprop:Generator_ColumnPropNameInTable="etiquetaClienteColumn" msprop:Generator_UserColumnName="etiquetaCliente" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="codCustomerPartNumber" msprop:Generator_ColumnVarNameInTable="columncodCustomerPartNumber" msprop:Generator_ColumnPropNameInRow="codCustomerPartNumber" msprop:Generator_ColumnPropNameInTable="codCustomerPartNumberColumn" msprop:Generator_UserColumnName="codCustomerPartNumber" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="textEAN13" msprop:Generator_ColumnVarNameInTable="columntextEAN13" msprop:Generator_ColumnPropNameInRow="textEAN13" msprop:Generator_ColumnPropNameInTable="textEAN13Column" msprop:Generator_UserColumnName="textEAN13" type="xs:string" minOccurs="0" />
+              <xs:element name="descripcionArtCli" msprop:Generator_ColumnVarNameInTable="columndescripcionArtCli" msprop:Generator_ColumnPropNameInRow="descripcionArtCli" msprop:Generator_ColumnPropNameInTable="descripcionArtCliColumn" msprop:Generator_UserColumnName="descripcionArtCli" type="xs:string" minOccurs="0" />
+              <xs:element name="codPV" msprop:Generator_ColumnVarNameInTable="columncodPV" msprop:Generator_ColumnPropNameInRow="codPV" msprop:Generator_ColumnPropNameInTable="codPVColumn" msprop:Generator_UserColumnName="codPV" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="textCustomerPartNumber" msprop:Generator_ColumnVarNameInTable="columntextCustomerPartNumber" msprop:Generator_ColumnPropNameInRow="textCustomerPartNumber" msprop:Generator_ColumnPropNameInTable="textCustomerPartNumberColumn" msprop:Generator_UserColumnName="textCustomerPartNumber" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
