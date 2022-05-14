@@ -10,7 +10,7 @@ Public Class funcionesMenu_EntradasUsuario
             Dim sconexion As String = CadenaConexion()
             Dim con As New SqlConnection(sconexion)
 
-            cmd = New SqlCommand("select Menu_EntradasUsuario.*, Nivel,Nombre,idMenuPadre,Ejecutar,Orden from Menu_EntradasUsuario Left Join Menu_Entradas ON Menu_Entradas.idMenu = Menu_EntradasUsuario.idMenu where idUsuario = " & iidUsuario & " ORDER By Nivel ASC, Orden ASC ", con)
+            cmd = New SqlCommand("select Menu_EntradasUsuario.* from Menu_EntradasUsuario Left Join Menu_Entradas ON Menu_Entradas.idMenu = Menu_EntradasUsuario.idMenu where idUsuario = " & iidUsuario & " ORDER By Nivel ASC, Orden ASC ", con)
 
             con.Open()
             If cmd.ExecuteNonQuery Then
@@ -55,7 +55,7 @@ Public Class funcionesMenu_EntradasUsuario
             Dim sconexion As String = CadenaConexion()
             Dim con As New SqlConnection(sconexion)
 
-            cmd = New SqlCommand("select Menu_EntradasUsuario.*, Nivel,Nombre,idMenuPadre,Ejecutar,Orden from Menu_EntradasUsuario Left Join Menu_Entradas ON Menu_Entradas.idMenu = Menu_EntradasUsuario.idMenu where idUsuario = " & iidUsuario & " ORDER By Nivel ASC, Orden ASC ", con)
+            cmd = New SqlCommand("select me.Nivel,me.Nombre,me.idMenuPadre,me.Ejecutar from Menu_EntradasUsuario meusu Left Join Menu_Entradas me ON meusu.idMenu = me.idMenu where idUsuario = " & iidUsuario & " ORDER By Nivel ASC, Orden ASC ", con)
 
             con.Open()
             If cmd.ExecuteNonQuery Then
